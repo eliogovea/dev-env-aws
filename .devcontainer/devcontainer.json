@@ -1,0 +1,49 @@
+{
+	"name": "Development environment for AWS apps",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"USERNAME": "${localEnv:USER}"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "bash",
+						"icon": "terminal-bash"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"json.format.enable": true,
+				"json.format.keepLines": false,
+				"editor.tabSize": 4,
+				"editor.insertSpaces": true,
+				"editor.detectIndentation": true,
+				"editor.fontSize": 14,
+				"editor.formatOnSave": true,
+				"editor.lineNumbers": "on",
+				"editor.minimap.enabled": false,
+				"editor.renderLineHighlight": "all",
+				"editor.tabCompletion": "on",
+				"editor.rulers": [
+					120
+				],
+				"files.trimTrailingWhitespace": true,
+				"files.insertFinalNewline": true,
+				"files.trimFinalNewlines": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.debugpy",
+				"ms-azuretools.vscode-docker",
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens",
+				"MS-vsliveshare.vsliveshare",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+	"remoteUser": "${localEnv:USER}"
+}
